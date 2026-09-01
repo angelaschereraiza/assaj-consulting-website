@@ -1,32 +1,22 @@
 :root {
   --font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-display: "Playfair Display", Georgia, serif;
-
+  --font-display: "Source Serif 4", Georgia, serif;
   --bg: #fbfaf6;
-  --surface: #f3efe3;
-  --surface-strong: #e8dfc7;
-  --accent: #d1bd88;
-  --accent-dark: #9c8249;
-
+  --surface: #f4f0e5;
+  --surface-strong: #e2d8bc;
+  --accent: #d4c49b;
+  --accent-dark: #8f7942;
   --text: #24221e;
   --muted: #6b675e;
   --border: rgba(36, 34, 30, 0.12);
-
   --white: #ffffff;
-
   --shadow: 0 1.5rem 4rem rgba(74, 62, 35, 0.10);
   --shadow-small: 0 0.75rem 2rem rgba(74, 62, 35, 0.08);
-
   --radius: 1.75rem;
   --radius-large: 3rem;
   --container: 70rem;
-
   --header-height: 5.5rem;
 }
-
-/* ===========================
-   Base
-=========================== */
 
 * {
   box-sizing: border-box;
@@ -96,9 +86,7 @@ button:focus-visible {
   outline-offset: 0.1875rem;
 }
 
-/* ===========================
-   Header
-=========================== */
+/* Header */
 
 .site-header {
   position: sticky;
@@ -129,7 +117,6 @@ button:focus-visible {
   width: 15rem;
   max-width: 42vw;
   height: auto;
-  border-radius: 0.75rem;
 }
 
 .nav-desktop {
@@ -141,7 +128,7 @@ button:focus-visible {
 .nav-desktop a {
   position: relative;
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
   transition: color 0.2s ease;
@@ -168,9 +155,7 @@ button:focus-visible {
   transform: scaleX(1);
 }
 
-/* ===========================
-   Hamburger
-=========================== */
+/* Mobile navigation */
 
 .hamburger {
   display: none;
@@ -234,10 +219,6 @@ button:focus-visible {
   transform: rotate(90deg);
 }
 
-/* ===========================
-   Mobile menu
-=========================== */
-
 .mobile-menu {
   position: fixed;
   inset: var(--header-height) 0 0;
@@ -269,9 +250,7 @@ button:focus-visible {
   text-decoration: none;
 }
 
-/* ===========================
-   Common
-=========================== */
+/* Common */
 
 .section {
   padding: 6rem 0;
@@ -298,7 +277,7 @@ button:focus-visible {
   margin: 0;
   font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.15;
 }
 
@@ -308,9 +287,7 @@ button:focus-visible {
   color: var(--muted);
 }
 
-/* ===========================
-   Buttons
-=========================== */
+/* Buttons */
 
 .cta-row {
   display: flex;
@@ -320,6 +297,7 @@ button:focus-visible {
 }
 
 .btn {
+  width: 14rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -329,10 +307,7 @@ button:focus-visible {
   border-radius: 999rem;
   font-weight: 600;
   text-decoration: none;
-  transition:
-    transform 0.2s ease,
-    background 0.2s ease,
-    border-color 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .btn:hover {
@@ -358,33 +333,26 @@ button:focus-visible {
   background: var(--surface);
 }
 
-/* ===========================
-   Hero
-=========================== */
+/* Hero */
 
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 6rem 0;
+  padding: 5rem 0;
 }
 
-.hero-grid {
+.hero-copy {
   position: relative;
   z-index: 2;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 5rem;
-  align-items: center;
 }
 
 .hero-copy h1 {
-  max-width: 45rem;
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(3rem, 6vw, 5.25rem);
-  font-weight: 500;
-  line-height: 1.03;
-  letter-spacing: -0.035em;
+  font-size: clamp(2.75rem, 5.5vw, 4.5rem);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
 }
 
 .hero-copy h1 span {
@@ -392,56 +360,10 @@ button:focus-visible {
 }
 
 .lead {
-  max-width: 38rem;
+  max-width: 45rem;
   margin: 1.75rem 0 0;
   color: var(--muted);
   font-size: 1.075rem;
-}
-
-.hero-portrait {
-  position: relative;
-  max-width: 27rem;
-  margin-left: auto;
-}
-
-.portrait-shape {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 4 / 5;
-  border-radius: 12rem 12rem var(--radius-large) var(--radius-large);
-  background: var(--surface-strong);
-  box-shadow: var(--shadow);
-}
-
-.portrait-shape img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.portrait-info {
-  position: absolute;
-  right: -2rem;
-  bottom: 2rem;
-  display: flex;
-  flex-direction: column;
-  max-width: 17rem;
-  padding: 1rem 1.25rem;
-  border-radius: 1.25rem;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: var(--shadow-small);
-  backdrop-filter: blur(0.75rem);
-}
-
-.portrait-info strong {
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-}
-
-.portrait-info span {
-  margin-top: 0.2rem;
-  color: var(--muted);
-  font-size: 0.75rem;
 }
 
 .hero-decoration {
@@ -455,7 +377,8 @@ button:focus-visible {
   left: -10rem;
   width: 22rem;
   height: 22rem;
-  background: var(--surface);
+  background: var(--surface-strong);
+  opacity: 0.6;
 }
 
 .hero-decoration-right {
@@ -463,12 +386,11 @@ button:focus-visible {
   bottom: -12rem;
   width: 30rem;
   height: 30rem;
-  border: 5rem solid var(--surface);
+  border: 5rem solid var(--surface-strong);
+  opacity: 0.6;
 }
 
-/* ===========================
-   Services
-=========================== */
+/* Services */
 
 .services {
   background: var(--surface);
@@ -481,15 +403,11 @@ button:focus-visible {
 }
 
 .service-card {
-  min-height: 17rem;
   padding: 2rem;
-  border: 0.0625rem solid rgba(156, 130, 73, 0.15);
+  border: 0.0625rem solid rgba(143, 121, 66, 0.18);
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.55);
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease;
+  background: rgba(255, 255, 255, 0.6);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .service-card:hover {
@@ -498,20 +416,11 @@ button:focus-visible {
   box-shadow: var(--shadow-small);
 }
 
-.service-number {
-  display: block;
-  margin-bottom: 3rem;
-  color: var(--accent-dark);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-}
-
 .service-card h3 {
   margin: 0;
   font-family: var(--font-display);
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .service-card p {
@@ -520,19 +429,18 @@ button:focus-visible {
   color: var(--muted);
 }
 
-/* ===========================
-   About
-=========================== */
+/* About */
 
 .about-grid {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 6rem;
+  grid-template-columns: 20rem 1fr;
+  gap: 5rem;
   align-items: center;
 }
 
 .about-image {
-  padding: 2rem 0 2rem 2rem;
+  width: 100%;
+  max-width: 20rem;
 }
 
 .about-image-inner {
@@ -583,6 +491,7 @@ button:focus-visible {
 .qualification strong {
   font-family: var(--font-display);
   font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .qualification span:last-child {
@@ -595,26 +504,7 @@ button:focus-visible {
   font-size: 1.25rem;
 }
 
-.text-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 0.75rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.text-link span {
-  transition: transform 0.2s ease;
-}
-
-.text-link:hover span {
-  transform: translateX(0.25rem);
-}
-
-/* ===========================
-   Contact
-=========================== */
+/* Contact */
 
 .contact {
   padding-top: 3rem;
@@ -624,9 +514,10 @@ button:focus-visible {
   display: grid;
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
+  border: 0.0625rem solid rgba(143, 121, 66, 0.16);
   border-radius: var(--radius-large);
-  background: var(--text);
-  color: var(--white);
+  background: var(--surface);
+  color: var(--text);
   box-shadow: var(--shadow);
 }
 
@@ -639,7 +530,7 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: var(--accent);
+  background: var(--surface);
   color: var(--text);
 }
 
@@ -655,18 +546,20 @@ button:focus-visible {
 .contact-details {
   display: grid;
   gap: 1.5rem;
+  background: var(--surface-strong);
+  color: var(--text);
 }
 
 .contact-item {
   display: flex;
   flex-direction: column;
   padding-bottom: 1.25rem;
-  border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.15);
+  border-bottom: 0.0625rem solid rgba(36, 34, 30, 0.15);
 }
 
 .contact-label {
   margin-bottom: 0.35rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--accent-dark);
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -674,6 +567,7 @@ button:focus-visible {
 }
 
 .contact-item a {
+  color: var(--text);
   text-decoration: none;
 }
 
@@ -684,20 +578,18 @@ button:focus-visible {
 .contact-button {
   justify-self: start;
   margin-top: 0.5rem;
-  background: var(--accent) !important;
-  color: var(--text) !important;
+  background: var(--text);
+  color: var(--white);
 }
 
 .contact-button:hover {
-  background: var(--surface-strong) !important;
+  background: var(--accent-dark);
 }
 
-/* ===========================
-   Footer
-=========================== */
+/* Footer */
 
 .site-footer {
-  padding: 2rem 0;
+  padding: 0 0 2rem 0;
 }
 
 .footer-inner {
@@ -709,38 +601,34 @@ button:focus-visible {
   font-size: 1rem;
 }
 
-.footer-company {
+.footer-company,
+.footer-links {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
 }
 
-.footer-company a {
+.footer-links {
+  align-items: flex-end;
+}
+
+.footer-company a,
+.footer-links  {
   color: var(--accent-dark);
   font-weight: 600;
   text-decoration: none;
 }
 
-.footer-company a:hover {
+.footer-company a:hover,
+.footer-links a:hover {
   text-decoration: underline;
-}
-
-.footer-links {
-  display: flex;
-  flex-direction: column;
+  color: var(--text);
 }
 
 .footer-links a {
   text-decoration: none;
 }
 
-.footer-links a:hover {
-  color: var(--text);
-}
-
-/* ===========================
-   Legal Modal
-=========================== */
+/* Legal modal */
 
 .modal {
   position: fixed;
@@ -796,7 +684,7 @@ button:focus-visible {
   margin: 0;
   font-family: var(--font-display);
   font-size: 1.75rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .modal-close {
@@ -829,7 +717,7 @@ button:focus-visible {
   margin: 2rem 0 0.5rem;
   font-family: var(--font-display);
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .modal-content h3:first-child {
@@ -845,9 +733,7 @@ button:focus-visible {
   color: var(--text);
 }
 
-/* ===========================
-   Responsive
-=========================== */
+/* Responsive */
 
 @media (max-width: 900px) {
   .nav-desktop {
@@ -858,33 +744,14 @@ button:focus-visible {
     display: block;
   }
 
-  .hero {
-    padding-top: 4rem;
-  }
-
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 3.5rem;
-  }
-
-  .hero-portrait {
-    width: min(100%, 25rem);
-    margin: 0 auto;
-  }
-
-  .portrait-info {
-    right: -1rem;
-  }
-
   .about-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
 
   .about-image {
-    width: min(100%, 27rem);
+    width: min(100%, 18rem);
     margin: 0 auto;
-    padding: 0;
   }
 
   .about-content {
@@ -911,18 +778,27 @@ button:focus-visible {
   }
 
   .section {
-    padding: 4.5rem 0;
+    padding: 2.5rem 0;
   }
 
   .hero {
-    padding: 3.5rem 0 4.5rem;
+    padding: 2.75rem 0 3.5rem;
+  }
+
+  .hero-copy {
+    min-width: 0;
   }
 
   .hero-copy h1 {
-    font-size: clamp(2.75rem, 13vw, 4rem);
+    max-width: 100%;
+    font-size: clamp(2rem, 10vw, 3rem);
+    line-height: 1.05;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
 
   .lead {
+    max-width: 100%;
     font-size: 1rem;
   }
 
@@ -934,24 +810,8 @@ button:focus-visible {
     width: 100%;
   }
 
-  .portrait-info {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    max-width: none;
-    margin: -1.5rem 1rem 0;
-  }
-
   .service-grid {
     grid-template-columns: 1fr;
-  }
-
-  .service-card {
-    min-height: auto;
-  }
-
-  .service-number {
-    margin-bottom: 2rem;
   }
 
   .contact-intro,
@@ -963,10 +823,19 @@ button:focus-visible {
     width: 100%;
   }
 
+  .site-footer {
+    padding: 0.5rem 0 2rem;
+  }
+
   .footer-inner,
-  .footer-links {
+  .footer-links,
+  .footer-company {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+  }
+
+  .footer-inner {
+    text-align: center;
   }
 
   .modal {
