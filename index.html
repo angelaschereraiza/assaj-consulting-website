@@ -3,17 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>ASSAJ Consulting GmbH</title>
-
   <link rel="icon" href="/images/favicon.ico" sizes="any" />
   <link rel="canonical" href="https://www.assajconsulting.gmbh/" />
-
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="description" content="ASSAJ Consulting GmbH in Birsfelden: persönliche Beratung für individuelle Versicherungs-, Vorsorge- und Absicherungslösungen." />
   <meta name="theme-color" content="#fbfaf6" />
-
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="ASSAJ Consulting GmbH" />
   <meta property="og:title" content="ASSAJ Consulting GmbH | Versicherungslösungen & Vorsorge" />
@@ -49,53 +45,58 @@
   }
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
 </head>
 <body>
   <div id="top"></div>
-  <a class="skip-link" href="#main">Zum Hauptinhalt springen</a>
+  <a class="skip-link" href="#main" data-i18n="skip">Zum Hauptinhalt springen</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="ASSAJ Consulting GmbH Startseite">
-        <img src="images/assaj_logo.png" alt="ASSAJ Consulting GmbH" class="brand-logo" width="1299" height="389" decoding="async" />
-      </a>
+      <a class="brand" href="#top" aria-label="ASSAJ Consulting GmbH"><img src="images/assaj_logo.png" alt="ASSAJ Consulting GmbH" class="brand-logo" width="1299" height="389" decoding="async" /></a>
 
-      <nav class="nav-desktop" aria-label="Hauptnavigation">
-        <a href="#services">Dienstleistungen</a>
-        <a href="#about">Über mich</a>
-        <a href="#contact">Kontakt</a>
-      </nav>
+      <div class="header-right">
+        <nav class="nav-desktop" aria-label="Hauptnavigation">
+          <a href="#services" data-i18n="navServices">Dienstleistungen</a>
+          <a href="#about" data-i18n="navAbout">Über mich</a>
+          <a href="#contact" data-i18n="navContact">Kontakt</a>
+        </nav>
 
-      <button class="hamburger" type="button" aria-label="Menü öffnen" aria-controls="mobileMenu" aria-expanded="false">
-        <span class="hamburger-box"><span class="hamburger-inner"></span></span>
-      </button>
+        <div class="language-switcher" aria-label="Sprache">
+          <button type="button" data-language="de" aria-label="Deutsch">DE</button><span aria-hidden="true">|</span>
+          <button type="button" data-language="fr" aria-label="Français">FR</button><span aria-hidden="true">|</span>
+          <button type="button" data-language="en" aria-label="English">EN</button>
+        </div>
+
+        <button class="hamburger" type="button" aria-label="Menü öffnen" aria-controls="mobileMenu" aria-expanded="false"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+      </div>
     </div>
   </header>
 
   <div id="mobileMenu" class="mobile-menu" hidden aria-hidden="true">
     <nav class="mobile-nav" aria-label="Mobile Navigation">
-      <a href="#services">Dienstleistungen</a>
-      <a href="#about">Über mich</a>
-      <a href="#contact">Kontakt</a>
+      <a href="#services" data-i18n="navServices">Dienstleistungen</a>
+      <a href="#about" data-i18n="navAbout">Über mich</a>
+      <a href="#contact" data-i18n="navContact">Kontakt</a>
     </nav>
+
+    <div class="mobile-language-switcher language-switcher">
+      <button type="button" data-language="de" aria-label="Deutsch">DE</button><span aria-hidden="true">|</span>
+      <button type="button" data-language="fr" aria-label="Français">FR</button><span aria-hidden="true">|</span>
+      <button type="button" data-language="en" aria-label="English">EN</button>
+    </div>
   </div>
 
   <main id="main">
     <section class="hero">
       <div class="container hero-copy">
-        <h1>Persönliche Beratung für individuelle <span>Ver&shy;siche&shy;rungs&shy;lösungen</span></h1>
-
-        <p class="lead">Gemeinsam erarbeiten wir massgeschneiderte Vorsorge- und Absicherungslösungen, die zu Ihrer persönlichen oder unternehmerischen Situation passen.</p>
+        <h1 data-i18n-html="heroTitle">Persönliche Beratung für individuelle <span>Ver&shy;siche&shy;rungs&shy;lösungen</span></h1>
+        <p class="lead" data-i18n="heroLead">Gemeinsam erarbeiten wir massgeschneiderte Vorsorge- und Absicherungslösungen, die zu Ihrer persönlichen oder unternehmerischen Situation passen.</p>
 
         <div class="cta-row">
-          <a class="btn primary" href="#contact">Kontakt aufnehmen</a>
-          <a class="btn secondary" href="#about">Mehr erfahren</a>
+          <a class="btn primary" href="#contact" data-i18n="contactButton">Kontakt aufnehmen</a>
+          <a class="btn secondary" href="#about" data-i18n="moreButton">Mehr erfahren</a>
         </div>
       </div>
 
@@ -106,58 +107,61 @@
     <section id="services" class="section services">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Dienstleistungen</p>
-          <h2>Consulting im umfassenden Feld für Versicherungslösungen</h2>
-          <p>Fundiertes Fachwissen und langjährige Erfahrung in der Finanz- und Versicherungsbranche bilden die Grundlage für eine auf Ihre Bedürfnisse abgestimmte Beratung.</p>
+          <p class="eyebrow" data-i18n="servicesEyebrow">Dienstleistungen</p>
+          <h2 data-i18n="servicesTitle">Consulting im umfassenden Feld für Versicherungslösungen</h2>
+          <p data-i18n="servicesIntro">Fundiertes Fachwissen und langjährige Erfahrung in der Finanz- und Versicherungsbranche bilden die Grundlage für eine auf Ihre Bedürfnisse abgestimmte Beratung.</p>
         </div>
 
         <div class="service-grid">
           <article class="service-card">
-            <h3>Versicherungs&shy;lösungen</h3>
-            <p>Persönliche Beratung bei unterschiedlichsten Versicherungsfragen und gemeinsame Erarbeitung passender Lösungen.</p>
+            <h3 data-i18n="serviceInsurance">Versicherungslösungen</h3>
+            <p data-i18n="serviceInsuranceText">Persönliche Beratung bei unterschiedlichsten Versicherungsfragen und gemeinsame Erarbeitung passender Lösungen.</p>
           </article>
 
           <article class="service-card">
-            <h3>Vorsorge</h3>
-            <p>Individuelle Vorsorgelösungen, die Ihre persönliche Situation und Ihre langfristigen Bedürfnisse berücksichtigen.</p>
+            <h3 data-i18n="servicePension">Vorsorge</h3>
+            <p data-i18n="servicePensionText">Individuelle Vorsorgelösungen, die Ihre persönliche Situation und Ihre langfristigen Bedürfnisse berücksichtigen.</p>
           </article>
 
           <article class="service-card">
-            <h3>Absicherung</h3>
-            <p>Massgeschneiderte Absicherungslösungen für Ihre persönliche oder unternehmerische Situation.</p>
+            <h3 data-i18n="serviceProtection">Absicherung</h3>
+            <p data-i18n="serviceProtectionText">Massgeschneiderte Absicherungslösungen für Ihre persönliche oder unternehmerische Situation.</p>
           </article>
 
           <article class="service-card">
-            <h3>Begleitung im Schadenfall</h3>
-            <p>Im Schadenfall begleite ich Sie als Bindeglied zwischen Versicherungsunternehmen und Versicherten und agiere in Ihrem Interesse.</p>
+            <h3 data-i18n="serviceClaims">Begleitung im Schadenfall</h3>
+            <p data-i18n="serviceClaimsText">Im Schadenfall begleite ich Sie als Bindeglied zwischen Versicherungsunternehmen und Versicherten und agiere in Ihrem Interesse.</p>
           </article>
         </div>
       </div>
     </section>
 
     <section id="about" class="section about">
-      <div class="container about-grid">
-        <div class="about-image">
-          <div class="about-image-inner">
-            <img src="images/portrait.png" alt="Andrea M. Jüngling, Inhaberin der ASSAJ Consulting GmbH" width="600" height="750" loading="lazy" decoding="async" />
+      <div class="container about-wrapper">
+        <div class="about-heading">
+          <p class="eyebrow" data-i18n="aboutEyebrow">Über mich</p>
+          <h2 data-i18n-html="aboutTitle">Persönlich. Kompetent. An Ihrer Seite.</h2>
+        </div>
+
+        <div class="about-main">
+          <div class="about-image">
+            <div class="about-image-inner"><img src="images/portrait.png" alt="Andrea M. Jüngling, Inhaberin der ASSAJ Consulting GmbH" data-i18n-alt="portraitAlt" loading="lazy" decoding="async" /></div>
+          </div>
+
+          <div class="about-text">
+            <p class="about-lead" data-i18n="aboutLead">Als Inhaberin und Geschäftsführerin der ASSAJ Consulting GmbH stehe ich Ihnen mit fundiertem Fachwissen in diversen Bereichen des Versicherungswesens gerne zur Seite.</p>
+            <p data-i18n="aboutText">Dank meiner langjährigen Erfahrung in der Finanz- und Versicherungsbranche begleite ich Sie bei unterschiedlichsten Versicherungsfragen und erarbeite gemeinsam mit Ihnen passende Vorsorge- und Absicherungslösungen.</p>
           </div>
         </div>
 
-        <div class="about-content">
-          <p class="eyebrow">Über mich</p>
-          <h2>Persönlich. Kompetent. An Ihrer Seite.</h2>
-
-          <p class="about-lead">Als Inhaberin und Geschäftsführerin der ASSAJ Consulting GmbH stehe ich Ihnen mit fundiertem Fachwissen in diversen Bereichen des Versicherungswesens gerne zur Seite.</p>
-
-          <p>Dank meiner langjährigen Erfahrung in der Finanz- und Versicherungsbranche begleite ich Sie bei unterschiedlichsten Versicherungsfragen und erarbeite gemeinsam mit Ihnen passende Vorsorge- und Absicherungslösungen.</p>
-
+        <div class="about-bottom">
           <div class="qualification">
-            <span class="qualification-label">Qualifikation</span>
+            <span class="qualification-label" data-i18n="qualification">Qualifikation</span>
             <strong>Andrea M. Jüngling</strong>
-            <span>Eidg. Dipl. Finanz- und Anlageexpertin</span>
+            <span data-i18n="qualificationText">Eidg. Dipl. Finanz- und Anlageexpertin</span>
           </div>
 
-          <p class="about-closing">Ich freue mich auf Ihre Kontaktaufnahme.</p>
+          <p class="about-closing" data-i18n="aboutClosing">Ich freue mich auf Ihre Kontaktaufnahme.</p>
         </div>
       </div>
     </section>
@@ -166,38 +170,38 @@
       <div class="container">
         <div class="contact-wrapper">
           <div class="contact-intro">
-            <p class="eyebrow">Kontakt</p>
-            <h2>Lassen Sie uns ins Gespräch kommen.</h2>
-            <p>Haben Sie Fragen zu Ihrer Versicherungssituation oder möchten Sie eine persönliche Beratung? Ich freue mich auf Ihre Kontaktaufnahme.</p>
+            <p class="eyebrow" data-i18n="contactEyebrow">Kontakt</p>
+            <h2 data-i18n="contactTitle">Lassen Sie uns ins Gespräch kommen.</h2>
+            <p data-i18n="contactIntro">Haben Sie Fragen zu Ihrer Versicherungssituation oder möchten Sie eine persönliche Beratung? Ich freue mich auf Ihre Kontaktaufnahme.</p>
           </div>
 
           <div class="contact-details">
             <div class="contact-item">
-              <span class="contact-label">Adresse</span>
+              <span class="contact-label" data-i18n="address">Adresse</span>
               <address>ASSAJ Consulting GmbH<br />Andrea M. Jüngling<br />Weidenweg 6<br />4127 Birsfelden</address>
             </div>
 
             <div class="contact-item">
-              <span class="contact-label">Telefon</span>
+              <span class="contact-label" data-i18n="phone">Telefon</span>
               <a href="tel:+41795489047">+41 79 548 90 47</a>
             </div>
 
             <div class="contact-item">
-              <span class="contact-label">E-Mail</span>
+              <span class="contact-label" data-i18n="email">E-Mail</span>
               <a href="mailto:juengling@assajconsulting.ch">juengling@assajconsulting.ch</a>
             </div>
 
             <div class="contact-item">
-              <span class="contact-label">Handelsregister</span>
+              <span class="contact-label" data-i18n="commercialRegister">Handelsregister</span>
               <span>CHE-291.490.260</span>
             </div>
 
             <div class="contact-item">
-              <span class="contact-label">FINMA-Registrierung</span>
+              <span class="contact-label" data-i18n="finma">FINMA-Registrierung</span>
               <span>F01067992</span>
             </div>
 
-            <a class="btn contact-button" href="mailto:juengling@assajconsulting.ch?subject=Anfrage%20ASSAJ%20Consulting">E-Mail schreiben</a>
+            <a class="btn contact-button" href="mailto:juengling@assajconsulting.ch?subject=Anfrage%20ASSAJ%20Consulting" data-i18n="emailButton">E-Mail schreiben</a>
           </div>
         </div>
       </div>
@@ -208,25 +212,23 @@
     <div class="container footer-inner">
       <div class="footer-company">
         <span>©<span id="year"></span> ASSAJ Consulting GmbH</span>
-        <span>Webseite von <a href="https://aiza.ch/" target="_blank" rel="noopener noreferrer">Aiza GmbH</a></span>
+        <span><span data-i18n="websiteBy">Webseite von</span> <a href="https://aiza.ch/" target="_blank" rel="noopener noreferrer">Aiza GmbH</a></span>
       </div>
 
       <div class="footer-links">
-        <a href="#" data-doc="imprint">Impressum</a>
-        <a href="#" data-doc="privacy">Datenschutzerklärung</a>
+        <a href="#" data-doc="imprint" data-i18n="imprint">Impressum</a>
+        <a href="#" data-doc="privacy" data-i18n="privacy">Datenschutzerklärung</a>
       </div>
     </div>
   </footer>
 
   <div id="legal-modal" class="modal" hidden aria-hidden="true">
     <div class="modal-backdrop" data-close="true"></div>
-
     <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <div class="modal-header">
         <h2 id="modal-title" class="modal-title"></h2>
         <button type="button" class="modal-close" aria-label="Schliessen" data-close="true">&times;</button>
       </div>
-
       <div id="modal-content" class="modal-content"></div>
     </div>
   </div>
