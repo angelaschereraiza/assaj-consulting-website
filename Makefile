@@ -1,7 +1,7 @@
 .PHONY: deploy_test serve
 
 deploy_test:
-	rsync -av --delete --exclude '.git' -e "ssh -p 17022" . aiza.ch:test/htdocs/
+	rsync -av --delete --exclude '.git' . aiza.ch:/var/www/test.aiza.ch/
 
 serve:
 	browser-sync start --server --files "*.html" "*.css" "*.js" "images/*"
