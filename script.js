@@ -44,7 +44,7 @@ const TRANSLATIONS = {
     aboutLead: 'Als Inhaberin und Geschäftsführerin der ASSAJ Consulting GmbH stehe ich Ihnen mit fundiertem Fachwissen in diversen Bereichen des Versicherungswesens gerne zur Seite.',
     aboutText: 'Dank meiner langjährigen Erfahrung in der Finanz- und Versicherungsbranche begleite ich Sie bei unterschiedlichsten Versicherungsfragen und erarbeite gemeinsam mit Ihnen passende Vorsorge- und Absicherungslösungen.',
     qualification: 'Qualifikation',
-    qualificationText: 'Eidg. Dipl. Finanz- und Anlageexpertin',
+    qualificationText: 'Finanz- und Anlageexpertin mit eidg. Diplom',
     aboutClosing: 'Ich freue mich auf Ihre Kontaktaufnahme.',
     portraitAlt: 'Andrea M. Jüngling, Inhaberin der ASSAJ Consulting GmbH',
     contactEyebrow: 'Kontakt',
@@ -91,9 +91,9 @@ const TRANSLATIONS = {
     aboutEyebrow: 'À propos',
     aboutTitle: 'Personnelle. Compétence. À vos côtés.',
     aboutLead: 'En tant que propriétaire et directrice générale d’ASSAJ Consulting GmbH, je mets volontiers à votre disposition mes connaissances approfondies dans différents domaines de l’assurance.',
-    aboutText: 'Grâce à mes nombreuses années d’expérience dans les secteurs de la finance et de l’assurance, je vous accompagne pour différentes questions d’assurance et élabore avec vous des solutions adaptées en matière de prévoyance et de protection.',
+    aboutText: 'Grâce à mes nombreuses années d’expérience dans les secteurs de la finance et de l’assurance, je vous accompagne pour des questions d’assurance et élabore avec vous des solutions adaptées en matière de prévoyance et de protection.',
     qualification: 'Qualification',
-    qualificationText: 'Experte diplômée en finance et investissement',
+    qualificationText: 'Experte en finance et investissements avec diplôme fédéral',
     aboutClosing: 'Je me réjouis de votre prise de contact.',
     portraitAlt: 'Andrea M. Jüngling, propriétaire d’ASSAJ Consulting GmbH',
     contactEyebrow: 'Contact',
@@ -139,10 +139,10 @@ const TRANSLATIONS = {
     serviceClaimsText: 'In the event of a claim, I support you as a liaison between the insurance company and the insured and act in your interests.',
     aboutEyebrow: 'About me',
     aboutTitle: 'Personal. Competent.<br>By your side.',
-    aboutLead: 'As owner and managing director of ASSAJ Consulting GmbH, I am pleased to support you with in-depth expertise across various areas of insurance.',
+    aboutLead: 'As owner and managing director of ASSAJ Consulting GmbH, I am pleased to provide you with professional support and in-depth expertise across a wide range of areas within the insurance industry.',
     aboutText: 'Thanks to my many years of experience in the financial and insurance sectors, I support you with a wide range of insurance matters and work with you to develop suitable pension and protection solutions.',
     qualification: 'Qualification',
-    qualificationText: 'Federally certified financial and investment expert',
+    qualificationText: 'Expert in finance and investment, Advanced Federal Diploma',
     aboutClosing: 'I am looking forward to hearing from you soon.',
     portraitAlt: 'Andrea M. Jüngling, owner of ASSAJ Consulting GmbH',
     contactEyebrow: 'Contact',
@@ -172,7 +172,7 @@ const LEGAL = {
         <p>ASSAJ Consulting GmbH<br>Weidenweg 6<br>4127 Birsfelden<br>Schweiz</p>
 
         <h3>Vertretungsberechtigte Person</h3>
-        <p>Andrea M. Jüngling<br>Inhaberin und Geschäftsführerin<br>Eidg. Dipl. Finanz- und Anlageexpertin</p>
+        <p>Andrea M. Jüngling<br>Inhaberin und Geschäftsführerin<br>Finanz- und Anlageexpertin mit eidg. Diplom</p>
 
         <h3>Kontakt</h3>
         <p>Telefon: <a href="tel:+41795489047">+41 79 548 90 47</a><br>E-Mail: <a href="mailto:juengling@assajconsulting.ch">juengling@assajconsulting.ch</a></p>
@@ -259,7 +259,7 @@ const LEGAL = {
         <p>ASSAJ Consulting GmbH<br>Weidenweg 6<br>4127 Birsfelden<br>Suisse</p>
 
         <h3>Personne autorisée à représenter l’entreprise</h3>
-        <p>Andrea M. Jüngling<br>Propriétaire et directrice générale<br>Experte diplômée en finance et investissement</p>
+        <p>Andrea M. Jüngling<br>Propriétaire et directrice générale<br>Experte en finance et investissements avec diplôme fédéral</p>
 
         <h3>Contact</h3>
         <p>Téléphone : <a href="tel:+41795489047">+41 79 548 90 47</a><br>E-mail : <a href="mailto:juengling@assajconsulting.ch">juengling@assajconsulting.ch</a></p>
@@ -342,7 +342,7 @@ const LEGAL = {
         <p>ASSAJ Consulting GmbH<br>Weidenweg 6<br>4127 Birsfelden<br>Switzerland</p>
 
         <h3>Authorised representative</h3>
-        <p>Andrea M. Jüngling<br>Owner and Managing Director<br>Federally certified financial and investment expert</p>
+        <p>Andrea M. Jüngling<br>Owner and Managing Director<br>Expert in finance and investment, Advanced Federal Diploma</p>
 
         <h3>Contact</h3>
         <p>Phone: <a href="tel:+41795489047">+41 79 548 90 47</a><br>Email: <a href="mailto:juengling@assajconsulting.ch">juengling@assajconsulting.ch</a></p>
