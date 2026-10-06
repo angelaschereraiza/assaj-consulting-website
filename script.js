@@ -21,6 +21,9 @@ const TRANSLATIONS = {
     title: 'ASSAJ Consulting GmbH | Versicherungslösungen & Vorsorge',
     description: 'ASSAJ Consulting GmbH in Birsfelden: persönliche Beratung für individuelle Versicherungs-, Vorsorge- und Absicherungslösungen.',
     skip: 'Zum Hauptinhalt springen',
+    mainNavigation: 'Hauptnavigation',
+    mobileNavigation: 'Mobile Navigation',
+    languageSwitcher: 'Sprache',
     navServices: 'Dienstleistungen',
     navAbout: 'Über mich',
     navContact: 'Kontakt',
@@ -69,6 +72,9 @@ const TRANSLATIONS = {
     title: 'ASSAJ Consulting GmbH | Assurances & prévoyance',
     description: 'ASSAJ Consulting GmbH à Birsfelden : conseil personnalisé en matière d’assurances, de prévoyance et de protection.',
     skip: 'Aller au contenu principal',
+    mainNavigation: 'Navigation principale',
+    mobileNavigation: 'Navigation mobile',
+    languageSwitcher: 'Langue',
     navServices: 'Services',
     navAbout: 'À propos',
     navContact: 'Contact',
@@ -117,6 +123,9 @@ const TRANSLATIONS = {
     title: 'ASSAJ Consulting GmbH',
     description: 'ASSAJ Consulting GmbH in Birsfelden: personal advice for individual insurance, pension and protection solutions.',
     skip: 'Skip to main content',
+    mainNavigation: 'Main navigation',
+    mobileNavigation: 'Mobile navigation',
+    languageSwitcher: 'Language',
     navServices: 'Services',
     navAbout: 'About me',
     navContact: 'Contact',
@@ -416,7 +425,8 @@ const LEGAL = {
 };
 
 function detectLanguage() {
-  const savedLanguage = localStorage.getItem('assaj-language');
+  let savedLanguage = null;
+  try { savedLanguage = localStorage.getItem('assaj-language'); } catch {}
   if (savedLanguage && TRANSLATIONS[savedLanguage]) return savedLanguage;
 
   const browserLanguages = navigator.languages?.length ? navigator.languages : [navigator.language];
@@ -458,6 +468,11 @@ function setLanguage(language, save = true) {
     if (translation[key] !== undefined) element.setAttribute('alt', translation[key]);
   });
 
+  document.querySelectorAll('[data-i18n-aria-label]').forEach(element => {
+    const key = element.dataset.i18nAriaLabel;
+    if (translation[key] !== undefined) element.setAttribute('aria-label', translation[key]);
+  });
+
   document.querySelectorAll('[data-language]').forEach(button => {
     const active = button.dataset.language === language;
     button.classList.toggle('is-active', active);
@@ -471,7 +486,9 @@ function setLanguage(language, save = true) {
 
   document.querySelector('.modal-close')?.setAttribute('aria-label', translation.modalClose);
 
-  if (save) localStorage.setItem('assaj-language', language);
+  if (save) {
+    try { localStorage.setItem('assaj-language', language); } catch {}
+  }
 
   if (currentLegalDocument && legalModal && !legalModal.hidden) renderLegalDocument(currentLegalDocument);
 }
@@ -600,6 +617,25 @@ window.addEventListener('popstate', event => {
 });
 
 document.addEventListener('keydown', event => {
+  if (event.key === 'Tab' && legalModal && !legalModal.hidden) {
+    const focusable = [...legalModal.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')]
+      .filter(element => !element.hasAttribute('hidden'));
+
+    if (focusable.length) {
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+    return;
+  }
+
   if (event.key !== 'Escape') return;
 
   if (legalModal && !legalModal.hidden) {
@@ -618,3 +654,9 @@ const year = document.querySelector('#year');
 if (year) year.textContent = new Date().getFullYear();
 
 setLanguage(detectLanguage(), false);
+
+const initialLegalDocument = window.location.hash.slice(1);
+if (LEGAL[getCurrentLanguage()]?.[initialLegalDocument]) {
+  history.replaceState({ legalModal: initialLegalDocument }, '', window.location.hash);
+  openLegalModal(initialLegalDocument, false);
+}

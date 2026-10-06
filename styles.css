@@ -1,6 +1,6 @@
 :root {
-  --font: "Aharoni", Arial, sans-serif;
-  --font-display: "Aharoni", Arial, sans-serif;
+  --font: "Aharoni", Helvetica, Arial, sans-serif;
+  --font-display: "Aharoni", Helvetica, Arial, sans-serif;
   --bg: #fbfaf6;
   --surface: #f4f0e5;
   --surface-strong: #e2d8bc;
@@ -63,7 +63,8 @@ html[lang^="fr"] * {
   word-break: normal;
 }
 
-html[lang^="en"] .hero-copy h1, .lead {
+html[lang^="en"] .hero-copy h1,
+html[lang^="en"] .lead {
   hyphens: none !important;
   -webkit-hyphens: none !important;
   overflow-wrap: normal !important;
@@ -699,6 +700,7 @@ button:focus-visible {
 }
 
 .contact-item a {
+  overflow-wrap: anywhere;
   color: var(--text);
   text-decoration: none;
 }
