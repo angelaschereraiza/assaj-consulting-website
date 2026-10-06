@@ -11,7 +11,6 @@ Built with semantic HTML, CSS and vanilla JavaScript.
 - German, French and English language switching
 - Accessible keyboard navigation and legal dialogs
 - SEO meta tags and structured data
-- `robots.txt` and `sitemap.xml`
 - Lightweight and dependency-free
 - Automatic copyright year
 
